@@ -27,15 +27,24 @@ function chefe(){
 // todos vet aponta para vetor
 function requisito1(vet){
     var objeto = new Object()
-    objeto.sexo = prompt(`Informe M ou F`)
+    objeto.sexo = prompt(`Informe M ou F`).toUpperCase()
     objeto.altura = Number(prompt(`Informe altura`))
     objeto.idade = Number(prompt(`Informe sua idade`))
-    objeto.olhos = prompt(`Informe a cor dos olhos - A - azul V - verde C - castanho`)
+    objeto.olhos = prompt(`Informe a cor dos olhos - A - azul V - verde C - castanho`).toUpperCase()
     // insere no vetor
     vet.push(objeto) // insere no vetor - escopo global
     console.log(`Habitante cadastrado com sucesso`)
 }
 function requisito2(vet){
+    var soma = 0
+    var qtde = 0
+    for(var i = 0; i < vet.length; i++){
+        if ((vet[i].olhos == 'C') && (vet[i].altura > 1.60)){
+            soma = soma + vet[i].idade
+            qtde++
+        }
+        console.log(`A média é ${soma / qtde}`)
+    }
 
 }
 function requisito3(vet){
