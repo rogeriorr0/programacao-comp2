@@ -18,7 +18,7 @@ function chefe(){
                     break
             case 5: requisito5(vetor)
                     break
-            case 6: console.log(`Opção inválida`)
+            case 6: console.log(`Programa vai ser encerrado`)
         }
     }
     while (opcao != 6)  
@@ -43,8 +43,10 @@ function requisito2(vet){
             soma = soma + vet[i].idade
             qtde++
         }
-        console.log(`A média é ${soma / qtde}`)
     }
+    if (qtde != 0)
+        console.log(`A média é ${soma / qtde}`)
+        else console.log(`Não existe habitante para este cálculo`)
 
 }
 function requisito3(vet){
