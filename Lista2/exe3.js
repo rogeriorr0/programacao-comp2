@@ -50,7 +50,10 @@ function requisito2(vet){
 
 }
 function requisito3(vet){
-
+    var maiorIdade = vet[0].idade
+    if (vet[i].idade > maiorIdade)
+    maiorIdade = vet[i].idade
+    console.log(`A maior idade dos habitantes é ${maiorIdade}`)
 }
 function requisito4(vet){
 
