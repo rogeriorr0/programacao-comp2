@@ -51,13 +51,30 @@ function requisito2(vet){
 }
 function requisito3(vet){
     var maiorIdade = vet[0].idade
-    if (vet[i].idade > maiorIdade)
-    maiorIdade = vet[i].idade
+    for(var i =1; i < vet.length; i++){
+         if (vet[i].idade > maiorIdade)
+            maiorIdade = vet[i].idade
+    }
     console.log(`A maior idade dos habitantes é ${maiorIdade}`)
 }
 function requisito4(vet){
+    var qtde = 0
+    for(var i = 0; vet.length; i++){
+        if (((vet[i].sexo == "f") && (vet[i].idade >= 20) && (vet[i].idade <= 45))
+        || 
+        (vet[i].olhos == "V") && (vet[i].altura < 1.70)){
+            qtde++
+        }
+    }
+        console.log(qtde)
 
 }
 function requisito5(vet){
-
+    var qtde = 0
+    for(var i = 0; vet.length; i++){
+        if (vet[i].sexo == "M"){
+            qtde++
+        }
+    }
+    console.log(qtde/vet.length*1000)
 }
