@@ -10,8 +10,8 @@ function chefe(){
         [3]. Consultas Vendas Funcionario Mes  
         [4]. Consulta vendas Funcionario
         [5]. Consultar Vendedor maior Venda
-        [6]. 
-        [7].Sair`))
+        [6]. Consultar Mes com Mais Vendas
+        [7]. Sair`))
         switch(opcao){
             case 1: cadastraVendedor(vendedor) // passando a referencia de vendedores
                     break
@@ -24,7 +24,7 @@ function chefe(){
                     break
             case 5: consultaVendedorMaiorVenda(vend)
                     break
-            case 6: 
+            case 6: consultaMesMaisVendas(vendas)
                     break
             case 7: console.log(`Saindo ...`)
                     break
@@ -120,4 +120,211 @@ function consultaVendedorMaiorVenda(vend){
     }
     console.log(`A maior venda é de ${maiorVenda} feita pelo vendedor ${codigoVendedor}`)
 }
+
+function consultaMesMaisVendas(vend){
+    // criar um vetor que vai conter total de vendas do mes
+    let meses = [0,0,0,0,0,0,0,0,0,0,0,0]
+    // percorre o vetor de vendas para acumular
+    for(let i=0; i<vend.length; i++){
+        let posicao = vend[i].mes - 1
+        meses[posicao] = meses[posicao] + vend[i].valor
+    }
+    // descobrir o maior valor no vetor
+    let maioValor = meses[0]
+    for(let i =0; i < vend.length; i++){
+        if (vend[i]. valor > maiorValor){ // achei um valor maior
+            maiorValor = vend[i].valor // atualiza
+        }
+    }
+    let posicao = vend.indexOF(maiorValor) // posicao no vetor contendo o maior valor
+    console.log(`Mês com mais venda ${posicao + 1} e o valor é ${maiorValor}`)
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
